@@ -5,8 +5,8 @@ The code is not very clean, but at some point I'll clean it up and also fix a fe
 
 Installation and Editing
 ------
-First you need to install tailwind.css
-```npm install -D tailwindcss```
+First you need to install all dependiences
+```npm i```
 
 Then you need to watch for changes
 ```npx tailwindcss -i ./src/styles.css -o ./styles/styles.css```
