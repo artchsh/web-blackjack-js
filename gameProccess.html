@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blackjack</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="./scripts/game.js"></script>
+</head>
+
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-screen font-sans text-base subpixel-antialiased flex items-center justify-center">
+    <div class="flex justify-center items-center flex-col w-fit">
+        <div class="w-96">
+            <div class="bg-slate-100 p-5 mx-2 rounded-md drop-shadow">
+                <label for="input-group-1" class="block mb-2 text-sm font-medium text-slate-900">Ваша ставка</label>
+   <div class="relative mb-2">
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <i class="text-slate-500 fa-solid fa-coins"></i>
+      </div>
+      <input type="text" id="bet" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 outline-0" placeholder="1000" required>
+   </div>
+                <button id="betButton" onclick="bet()"
+                    class="bg-purple-500 hover:bg-purple-700 w-full text-white font-bold py-2 px-4 rounded-md">
+                    Ставка
+                </button>
+            </div>
+        </div>
+        <div class="w-96">
+            <div class="text-slate-900">
+                <div class="bg-slate-100 p-5 m-2 rounded-md drop-shadow">
+                    <div id="players" class="card-mini-wrapper"></div>
+                </div>
+                <div class="bg-slate-100 p-5 m-2 rounded-md drop-shadow">
+                    <p class="text-slate-500">
+                        <i class="fa-solid fa-dollar-sign"></i></i> <span class="font-bold" id="userMoney"></span>  <i class="fa-solid fa-coins"></i>
+                        <span class="font-bold" id="userBet"></span>
+                    </p>
+                    <p class="card-stat">
+                        Ваши карты: <span class="font-bold" id="userCards"></span>
+                    </p>
+                    <div class="mt-2">
+                        <button id="pass" type="button"
+                            class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-md"
+                            onclick="userStand()">
+                            <i class="fa-solid fa-angles-up"></i> Пасс
+                        </button>
+                        <button id="addCard" type="button"
+                            class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-md"
+                            onclick="userHit()">
+                            <i class="fa-solid fa-angle-down"></i> Взять карту
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-slate-100 p-5 m-2 rounded-md drop-shadow flex items-center justify-center">
+                    
+                    <p class="inline-flex animate-pulse align-middle">
+                        <span id="notif" class="font-semibold "></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
