@@ -12,8 +12,3 @@ Then you need to watch for changes
 ```npx tailwindcss -i ./src/styles.css -o ./styles/styles.css```
 
 Also, if needed you need to edit `tailwind.config.js` as you need
-
-
-Try it
-------
-You can try it on my website [*click*](http://artchsh.top)
